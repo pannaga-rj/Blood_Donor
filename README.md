@@ -675,20 +675,16 @@ Vadiraja_Gurusarvabhouma_PRB/
 │   │       ├── java/
 │   │       │   └── com/vgs/
 │   │       │       ├── controller/   # REST Controllers
-│   │       │       ├── service/      # Business Logic
-│   │       │       ├── model/        # Entity Models
-│   │       │       ├── repository/   # Data Access Layer
-│   │       │       └── config/       # Configuration
+│   │       │       ├── service/       # Business Logic
+│   │       │       ├── model/         # Entity Models
+│   │       │       ├── repository/    # Data Access Layer
+│   │       │       └── config/        # Configuration
 │   │       └── resources/
 │   │           └── application.properties
 │   │
-│   ├── SQL Scripts/                  # Database scripts
-│   │   ├── CREATE_CONTACT_TABLES.sql
-│   │   ├── CREATE_SEVAS_TABLE.sql
-│   │   ├── CREATE_SEVA_BOOKINGS_TABLE.sql
-│   │   ├── CREATE_CALENDAR_TABLES.sql
-│   │   ├── CREATE_TITHINIRNAYA_TABLES.sql
-│   │   └── Other migration scripts
+│   ├── SQL_Query/                    # Database SQL Scripts
+│   │   ├── database_schema.sql       # Complete database schema (execute this)
+│   │   └── tables.sql                # Additional table definitions (if needed)
 │   │
 │   ├── pom.xml                       # Maven dependencies
 │   └── README.md                     # Backend documentation
