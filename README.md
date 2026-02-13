@@ -436,50 +436,50 @@ mvn spring-boot:run</code></pre>
 │                    VADIRAJA GURUSARVABHOUMA APPLICATION                    │
 │                                                                            │
 │   ┌─────────────────┐    ┌──────────────────┐    ┌────────────────────┐    │
-│   │ Landing Screen   │ →  │  Authentication  │ →  │  Role-Based Entry  │    │
-│   │ • Welcome        │    │  • Phone Auth     │    │  • Admin Dashboard │    │
-│   │ • Get Started    │    │  • OTP Verify     │    │  • User Dashboard  │    │
+│   │ Landing Screen  │ →  │  Authentication  │ →  │  Role-Based Entry  │    │
+│   │ • Welcome       │    │  • Phone Auth    │    │  • Admin Dashboard │    │
+│   │ • Get Started   │    │  • OTP Verify    │    │  • User Dashboard  │    │
 │   └─────────────────┘    └──────────────────┘    └────────────────────┘    │
 │                                                                            │
 │   ┌─────────────────────────────────────────────────────────────────────┐  │
 │   │                        ROLE-BASED MODULES                           │  │
 │   │                                                                     │  │
-│   │  ┌──────────────┐                    ┌──────────────┐               │  │
-│   │  │    ADMIN     │                    │     USER     │               │  │
-│   │  ├──────────────┤                    ├──────────────┤               │  │
-│   │  │• Dashboard   │                    │• Home Screen │               │  │
-│   │  │• Content Mgmt│                    │• Seva Booking│               │  │
-│   │  │• Seva Mgmt   │                    │• Bookings    │               │  │
-│   │  │• Analytics   │                    │• Calendar    │               │  │
-│   │  │• User Mgmt   │                    │• Gallery     │               │  │
-│   │  │• Notifications│                   │• Profile     │               │  │
-│   │  │• Feature Flags│                   │• Contact     │               │  │
-│   │  ├──────────────┤                    ├──────────────┤               │  │
-│   │  └─────────────────────────────────────────────────────────────────┘  │
-│   │                                                                            │
-│   │   ┌─────────────────────────────────────────────────────────────────────┐  │
-│   │   │                    CORE FEATURES                                     │  │
-│   │   │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐              │  │
-│   │   │  │ Seva Booking │  │   Calendar   │  │   Content    │              │  │
-│   │   │  │• Online Seva │  │• Events      │  │• Articles    │              │  │
-│   │   │  │• Daily Seva  │  │• Panchanga   │  │• Announcements│              │  │
-│   │   │  │• Gosevaa     │  │• Tithinirnaya│  │• Timings     │              │  │
-│   │   │  │• E-Kanike    │  │• Vishesha    │  │• Gallery     │              │  │
-│   │   │  └──────────────┘  └──────────────┘  └──────────────┘              │  │
-│   │   │                                                                            │
-│   │   │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐              │  │
-│   │   │  │  Notifications│  │   Analytics  │  │   Contact    │              │  │
-│   │   │  │• Push Notifs │  │• Booking Stats│ │• Locations   │              │  │
-│   │   │  │• Flash Alerts│  │• Revenue     │  │• Query Mgmt  │              │  │
-│   │   │  │• FCM Service │  │• User Stats  │  │• Social Media│              │  │
-│   │   │  └──────────────┘  └──────────────┘  └──────────────┘              │  │
-│   │   └─────────────────────────────────────────────────────────────────────┘  │
-│   │                                                                            │
-│   │   ┌─────────────────────────────────────────────────────────────────────┐  │
-│   │   │                      STATE MANAGEMENT LAYER                         │  │
-│   │   │   • User Session  • Feature Flags  • Language Preference            │  │
-│   │   │   • Local Storage  • API Service  • Notification Service            │  │
-│   │   └─────────────────────────────────────────────────────────────────────┘  │
+│   │  ┌───────────────┐                    ┌──────────────┐              │  │
+│   │  │    ADMIN      │                    │     USER     │              │  │
+│   │  ├───────────────┤                    ├──────────────┤              │  │
+│   │  │• Dashboard    │                    │• Home Screen │              │  │
+│   │  │• Content Mgmt │                    │• Seva Booking│              │  │
+│   │  │• Seva Mgmt    │                    │• Bookings    │              │  │
+│   │  │• Analytics    │                    │• Calendar    │              │  │
+│   │  │• User Mgmt    │                    │• Gallery     │              │  │
+│   │  │• Notifications│                    │• Profile     │              │  │
+│   │  │• Feature Flags│                    │• Contact     │              │  │
+│   │  ├───────────────┤                    ├──────────────┤              │  │
+│   │  └──────────────────────────────────────────────────────────────────┘  │
+│   │                                                                        │
+│   │   ┌─────────────────────────────────────────────────────────────────┐  │
+│   │   │                    CORE FEATURES                                │  │
+│   │   │  ┌──────────────┐  ┌──────────────┐  ┌───────────────┐          │  │
+│   │   │  │ Seva Booking │  │   Calendar   │  │   Content     │          │  │
+│   │   │  │• Online Seva │  │• Events      │  │• Articles     │          │  │
+│   │   │  │• Daily Seva  │  │• Panchanga   │  │• Announcements│          │  │
+│   │   │  │• Gosevaa     │  │• Tithinirnaya│  │• Timings      │          │  │
+│   │   │  │• E-Kanike    │  │• Vishesha    │  │• Gallery      │          │  │
+│   │   │  └──────────────┘  └──────────────┘  └───────────────┘          │  │
+│   │   │                                                                 │  │
+│   │   │  ┌───────────────┐  ┌───────────────┐  ┌──────────────┐         │  │
+│   │   │  │  Notifications│  │   Analytics   │  │   Contact    │         │  │
+│   │   │  │• Push Notifs  │  │• Booking Stats│  │• Locations   │         │  │
+│   │   │  │• Flash Alerts │  │• Revenue      │  │• Query Mgmt  │         │  │
+│   │   │  │• FCM Service  │  │• User Stats   │  │• Social Media│         │  │
+│   │   │  └───────────────┘  └───────────────┘  └──────────────┘         │  │
+│   │   └─────────────────────────────────────────────────────────────────┘  │
+│   │                                                                        │
+│   │   ┌─────────────────────────────────────────────────────────────────┐  │
+│   │   │                      STATE MANAGEMENT LAYER                     │  │
+│   │   │   • User Session  • Feature Flags  • Language Preference        │  │
+│   │   │   • Local Storage  • API Service  • Notification Service        │  │
+│   │   └─────────────────────────────────────────────────────────────────┘  │
 └─────────────────────────────────┬──────────────────────────────────────────┘
                                   │
                          ═════════╪═══════════
@@ -490,7 +490,7 @@ mvn spring-boot:run</code></pre>
 │                          FIREBASE SERVICES                                │
 │                                                                           │
 │  ┌──────────────────────┐  ┌──────────────────────┐  ┌─────────────────┐  │
-│  │  AUTHENTICATION      │  │  CLOUD MESSAGING      │  │ FIREBASE STORAGE│  │
+│  │  AUTHENTICATION      │  │  CLOUD MESSAGING     │  │ FIREBASE STORAGE│  │
 │  ├──────────────────────┤  ├──────────────────────┤  ├─────────────────┤  │
 │  │ • Phone Auth         │  │ • Push Notifications │  │ • Profile Images│  │  
 │  │ • OTP Verification   │  │ • Flash Alerts       │  │ • Logos         │  │
@@ -504,25 +504,25 @@ mvn spring-boot:run</code></pre>
                          ═════════╪═══════════
                                   │
 ┌─────────────────────────────────▼─────────────────────────────────────────┐
-│                      SPRING BOOT BACKEND (REST API)                      │
+│                      SPRING BOOT BACKEND (REST API)                       │
 │                                                                           │
 │  ┌──────────────────────┐  ┌──────────────────────┐  ┌─────────────────┐  │
 │  │  USER MANAGEMENT     │  │  SEVA MANAGEMENT     │  │ CONTENT MGMT    │  │
 │  ├──────────────────────┤  ├──────────────────────┤  ├─────────────────┤  │
 │  │ • Registration       │  │ • Seva Types         │  │ • Articles      │  │  
-│  │ • Profile Update     │  │ • Seva Bookings     │  │ • Announcements │  │
-│  │ • Role Assignment    │  │ • Payment Status    │  │ • Timings       │  │
-│  │ • FCM Token          │  │ • Booking History   │  │ • Gallery       │  │
+│  │ • Profile Update     │  │ • Seva Bookings      │  │ • Announcements │  │
+│  │ • Role Assignment    │  │ • Payment Status     │  │ • Timings       │  │
+│  │ • FCM Token          │  │ • Booking History    │  │ • Gallery       │  │
 │  │                      │  │                      │  │ • Logos         │  │
 │  └──────────────────────┘  └──────────────────────┘  └─────────────────┘  │
 │                                                                           │
 │  ┌──────────────────────┐  ┌──────────────────────┐  ┌─────────────────┐  │
-│  │  CALENDAR MANAGEMENT  │  │  ANALYTICS          │  │ FEATURE FLAGS   │  │
+│  │  CALENDAR MANAGEMENT │  │  ANALYTICS           │  │ FEATURE FLAGS   │  │
 │  ├──────────────────────┤  ├──────────────────────┤  ├─────────────────┤  │
-│  │ • Calendar Data      │  │ • Booking Analytics │  │ • Feature Toggle│  │
-│  │ • Tithinirnaya       │  │ • Revenue Reports   │  │ • Visibility    │  │
-│  │ • Vishesha           │  │ • User Statistics   │  │ • Enable/Disable│  │
-│  │ • Events             │  │ • Payment Analytics │  │                 │  │
+│  │ • Calendar Data      │  │ • Booking Analytics  │  │ • Feature Toggle│  │
+│  │ • Tithinirnaya       │  │ • Revenue Reports    │  │ • Visibility    │  │
+│  │ • Vishesha           │  │ • User Statistics    │  │ • Enable/Disable│  │
+│  │ • Events             │  │ • Payment Analytics  │  │                 │  │
 │  └──────────────────────┘  └──────────────────────┘  └─────────────────┘  │
 │                                                                           │
 │                    ┌────────────────────────────────┐                     │
@@ -543,30 +543,30 @@ mvn spring-boot:run</code></pre>
 │                            DEVICE DEPLOYMENT                                │
 │                                                                             │
 │     ┌─────────────────────────┐              ┌─────────────────────────┐    │
-│     │   MOBILE DEVICES         │              │   TABLET DEVICES        │    │
-│     │   • Portrait View        │              │   • Landscape View      │    │
+│     │   MOBILE DEVICES        │              │   TABLET DEVICES        │    │
+│     │   • Portrait View       │              │   • Landscape View      │    │
 │     │   • On-the-go Access    │              │   • Enhanced UI         │    │
 │     │   • All Features        │              │   • Bigger Display      │    │
 │     │   • Responsive Design   │              │   • Same Features       │    │
 │     └─────────────────────────┘              └─────────────────────────┘    │
 └─────────────────────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                              KEY DATA FLOWS                                 │
-│                                                                             │
-│  User Registration: Phone → Firebase OTP → Verify → Backend → Role Assign │
-│                                                                             │
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                              KEY DATA FLOWS                                      │
+│                                                                                  │
+│  User Registration: Phone → Firebase OTP → Verify → Backend → Role Assign        │
+│                                                                                  │
 │  Seva Booking: User → Select Seva → Choose Date → Payment → Booking Confirmation │
-│               → FCM Notification → Backend Storage                           │
-│                                                                             │
-│  Content Management: Admin → Create/Update Content → Backend → Database    │
-│                     → Real-time Sync → User App                             │
-│                                                                             │
-│  Analytics: All Transactions → PostgreSQL → Analytics Engine →             │
-│            Visualizations (Daily/Weekly/Monthly Reports)                   │
-│                                                                             │
-│  Notifications: Backend Event → FCM Service → Device Token → Push Notification│
-└─────────────────────────────────────────────────────────────────────────────┘
+│               → FCM Notification → Backend Storage                               │
+│                                                                                  │  
+│  Content Management: Admin → Create/Update Content → Backend → Database          │
+│                     → Real-time Sync → User App                                  │
+│                                                                                  │
+│  Analytics: All Transactions → PostgreSQL → Analytics Engine →                   │
+│            Visualizations (Daily/Weekly/Monthly Reports)                         │
+│                                                                                  │
+│  Notifications: Backend Event → FCM Service → Device Token → Push Notification   │
+└──────────────────────────────────────────────────────────────────────────────────┘
 </pre>
 
 <h3>🗂️ Project Structure:</h3>
