@@ -674,17 +674,48 @@ Vadiraja_Gurusarvabhouma_PRB/
 │   │   └── main/
 │   │       ├── java/
 │   │       │   └── com/vgs/
-│   │       │       ├── controller/   # REST Controllers
-│   │       │       ├── service/       # Business Logic
-│   │       │       ├── model/         # Entity Models
-│   │       │       ├── repository/    # Data Access Layer
-│   │       │       └── config/        # Configuration
+│   │       │       ├── controller/    # REST Controllers (API endpoints)
+│   │       │       │   ├── UserController.java
+│   │       │       │   ├── SevaController.java
+│   │       │       │   ├── SevaBookingController.java
+│   │       │       │   ├── ArticleController.java
+│   │       │       │   ├── AnnouncementController.java
+│   │       │       │   ├── AnalyticsController.java
+│   │       │       │   └── ... (other controllers)
+│   │       │       ├── dto/          # Data Transfer Objects (Request/Response)
+│   │       │       │   ├── UserRequest.java / UserResponse.java
+│   │       │       │   ├── SevaBookingRequest.java / SevaBookingResponse.java
+│   │       │       │   ├── ArticleRequest.java / ArticleResponse.java
+│   │       │       │   └── ... (other DTOs)
+│   │       │       ├── model/        # Entity Models (JPA entities)
+│   │       │       │   ├── User.java
+│   │       │       │   ├── Seva.java
+│   │       │       │   ├── SevaBooking.java
+│   │       │       │   ├── Article.java
+│   │       │       │   └── ... (other entities)
+│   │       │       ├── repository/   # Data Access Layer (JPA repositories)
+│   │       │       │   ├── UserRepository.java
+│   │       │       │   ├── SevaRepository.java
+│   │       │       │   ├── SevaBookingRepository.java
+│   │       │       │   └── ... (other repositories)
+│   │       │       ├── service/      # Business Logic Layer
+│   │       │       │   ├── UserService.java
+│   │       │       │   ├── SevaService.java
+│   │       │       │   ├── SevaBookingService.java
+│   │       │       │   ├── AnalyticsService.java
+│   │       │       │   └── ... (other services)
+│   │       │       ├── exception/    # Exception handling
+│   │       │       │   └── GlobalExceptionHandler.java
+│   │       │       ├── config/       # Configuration classes
+│   │       │       │   └── CorsConfig.java
+│   │       │       ├── util/         # Utility classes
+│   │       │       │   └── AdminUtil.java
+│   │       │       └── VgsBackendApplication.java  # Main application class
 │   │       └── resources/
-│   │           └── application.properties
+│   │           └── application.properties  # Application configuration
 │   │
 │   ├── SQL_Query/                    # Database SQL Scripts
-│   │   ├── database_schema.sql       # Complete database schema (execute this)
-│   │   └── tables.sql                # Additional table definitions (if needed)
+│   │   └── database_schema.sql       # Complete database schema (execute this)
 │   │
 │   ├── pom.xml                       # Maven dependencies
 │   └── README.md                     # Backend documentation
@@ -938,4 +969,3 @@ flutter build apk --release</code></pre>
   </a> -->
 </p>
 </section>
-
