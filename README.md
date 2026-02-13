@@ -271,27 +271,29 @@ spring.datasource.username=postgres
 spring.datasource.password=YOUR_POSTGRES_PASSWORD</code></pre>
     </li>
     <li>
-      <p><strong>Create Admin Table</strong>: Run the following SQL to create admins table:</p>
-      <pre><code>CREATE TABLE IF NOT EXISTS admins (
-    id BIGSERIAL PRIMARY KEY,
-    phone_number VARCHAR(255) UNIQUE NOT NULL
-);
+      <p><strong>Create Database Schema</strong>: Execute the complete database schema script to create all required tables:</p>
+      <pre><code>-- Navigate to the SQL scripts directory
+cd backend/SQL_Query
 
--- Insert admin phone numbers (without +91 prefix)
-INSERT INTO admins (phone_number) VALUES 
-('8660743840'),
-('9876543210');</code></pre>
+-- Execute the database schema script using psql or pgAdmin
+psql -U postgres -d vgs_db -f database_schema.sql</code></pre>
+      <p><strong>Alternative:</strong> You can also open <code>backend/SQL_Query/database_schema.sql</code> in pgAdmin and execute it directly.</p>
+      <p><strong>Note:</strong> The <code>database_schema.sql</code> file contains all CREATE TABLE statements, indexes, and initial data setup required for the application. This single script will create all necessary tables including:</p>
+      <ul>
+        <li>Admin and app features tables</li>
+        <li>Home page tables (logos, articles, announcements, timings)</li>
+        <li>Contact management tables</li>
+        <li>Seva management and booking tables</li>
+        <li>Calendar and Tithinirnaya tables</li>
+        <li>Social media and other feature tables</li>
+      </ul>
     </li>
     <li>
-      <p><strong>Run Database Migrations</strong>: Execute SQL scripts in the <code>backend/</code> directory to create all required tables. Key scripts include:</p>
-      <ul>
-        <li><code>CREATE_CONTACT_TABLES.sql</code></li>
-        <li><code>CREATE_SEVAS_TABLE.sql</code></li>
-        <li><code>CREATE_SEVA_BOOKINGS_TABLE.sql</code></li>
-        <li><code>CREATE_CALENDAR_TABLES.sql</code></li>
-        <li><code>CREATE_TITHINIRNAYA_TABLES.sql</code></li>
-        <li>And other table creation scripts</li>
-      </ul>
+      <p><strong>Insert Admin Phone Numbers</strong>: After creating the schema, add admin phone numbers to the admins table (without +91 prefix):</p>
+      <pre><code>INSERT INTO admins (phone_number, name, role) VALUES 
+('8660743840', 'Admin Name', 'admin'),
+('9876543210', 'Admin Name 2', 'admin');</code></pre>
+      <p><strong>Important:</strong> Phone numbers should be stored WITHOUT the +91 prefix in the database.</p>
     </li>
     <li>
       <p><strong>Build and Run Backend</strong>: Navigate to backend directory and run:</p>
@@ -875,9 +877,9 @@ flutter build apk --release</code></pre>
   </ol>
 
   <h3>📸 Screenshots</h3>
-  <p>Below are screenshots showcasing Vadiraja Gurusarvabhouma features across different roles and devices:</p>
+  <p>Below are screenshots showcasing Vadiraja Gurusarvabhouma features across different roles and devices (Mobile & Tablet):</p>
   
-  <h4>Mobile View:</h4>
+  <p>The screenshots include:</p>
   <ul>
     <li>Landing & Authentication screens</li>
     <li>User Dashboard & Home Screen</li>
@@ -886,19 +888,11 @@ flutter build apk --release</code></pre>
     <li>Gallery & Branch Dictionary</li>
     <li>Admin Dashboard & Analytics</li>
     <li>Content Management</li>
+    <li>Bilingual interface (English/Kannada)</li>
+    <li>Push notifications and flash alerts</li>
   </ul>
-  <!-- Add your mobile screenshots here -->
-  <p>📹 <em>Screenshot gallery link to be added</em></p>
   
-  <h4>Tablet View:</h4>
-  <ul>
-    <li>Landscape Dashboard</li>
-    <li>Enhanced Seva Booking Interface</li>
-    <li>Analytics Dashboard</li>
-    <li>Content Management</li>
-  </ul>
-  <!-- Add your tablet screenshots here -->
-  <p>📹 <em>Screenshot gallery link to be added</em></p>
+  <p>📹 <strong>Screenshot Gallery:</strong> <a href="YOUR_SCREENSHOT_LINK_HERE">View Screenshots</a></p>
 <hr/>
   <h3>💡 Testing Tips</h3>
   <ul>
