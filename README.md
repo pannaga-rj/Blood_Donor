@@ -256,7 +256,7 @@ The application serves two distinct user roles - Admin and User - each with tail
   <h3 id="installation">Installation</h3>
 
   <h4>1. Clone the Repository:</h4>
-  <pre><code>git clone https://github.com/sodematha-hackathon-2026/sodematha-hackathon-2026-team-vadiraja-gurusarvabhouma.git
+  <pre><code>git clone https://github.com/sodematha-hackathon-2026/sodematha-hackathon-2026-team-vadiraja-gurusarvabhouma.git</code></pre>
 
   <h3 id="backend_setup">Backend Setup</h3>
   <ol>
